@@ -97,7 +97,7 @@
 }
 
 /* Smooth transitions - Applied only where needed */
-/* Smooth transitions - Applied only where needed */
+
 a,
 button {
   transition-property: color, background-color, border-color, transform, box-shadow, opacity;
@@ -131,7 +131,7 @@ button {
 video {
   transform: translateZ(0);
   backface-visibility: hidden;
-  will-change: auto;
+
 }
 
 /* Optimize off-screen content */

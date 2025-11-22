@@ -105,18 +105,26 @@ const Navbar = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-secondary border-t border-gray-800"
+                        initial={{ opacity: 0, x: '100%' }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: '100%' }}
+                        transition={{ type: 'tween', duration: 0.3 }}
+                        className="fixed inset-0 z-50 md:hidden bg-primary/95 backdrop-blur-xl flex flex-col justify-center items-center"
                     >
-                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="absolute top-6 right-6 text-gray-300 hover:text-white focus:outline-none p-2"
+                        >
+                            <X size={32} />
+                        </button>
+
+                        <div className="flex flex-col items-center space-y-8">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}
                                     href={link.href}
                                     onClick={(e) => handleNavClick(e, link.href)}
-                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 cursor-pointer"
+                                    className="text-2xl font-medium text-gray-300 hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer"
                                 >
                                     {link.name}
                                 </a>
