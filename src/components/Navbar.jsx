@@ -44,67 +44,69 @@ const Navbar = () => {
     };
 
     return (
-        <motion.nav
-            className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-                ? 'bg-gradient-to-r from-primary/95 via-purple-900/20 to-primary/95 backdrop-blur-md shadow-lg shadow-purple/10 py-3'
-                : 'bg-transparent py-6'}`}
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center">
-                    {/* Logo and Brand */}
-                    <motion.div
-                        className="flex-shrink-0 flex items-center gap-3"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        <a
-                            href="#home"
-                            className="flex items-center gap-3"
-                            onClick={(e) => handleNavClick(e, '#home')}
+        <>
+            <motion.nav
+                className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+                    ? 'bg-gradient-to-r from-primary/95 via-purple-900/20 to-primary/95 backdrop-blur-md shadow-lg shadow-purple/10 py-3'
+                    : 'bg-transparent py-6'}`}
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-center">
+                        {/* Logo and Brand */}
+                        <motion.div
+                            className="flex-shrink-0 flex items-center gap-3"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.2 }}
                         >
-                            <Logo variant="fade" size="small" />
-                            <span className="text-xl font-bold text-white tracking-tighter">
-                                EvoRise Solutions
-                            </span>
-                        </a>
-                    </motion.div>
-
-                    {/* Desktop Menu */}
-                    <div className="hidden md:flex space-x-8">
-                        {navLinks.map((link) => (
-                            <motion.a
-                                key={link.name}
-                                href={link.href}
-                                onClick={(e) => handleNavClick(e, link.href)}
-                                className="relative text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-wide group cursor-pointer"
-                                whileHover={{ y: -2 }}
+                            <a
+                                href="#home"
+                                className="flex items-center gap-3"
+                                onClick={(e) => handleNavClick(e, '#home')}
                             >
-                                {link.name}
-                                <motion.span
-                                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 group-hover:w-full transition-all duration-300"
-                                />
-                            </motion.a>
-                        ))}
-                    </div>
+                                <Logo variant="fade" size="small" />
+                                <span className="text-xl font-bold text-white tracking-tighter">
+                                    EvoRise Solutions
+                                </span>
+                            </a>
+                        </motion.div>
 
-                    {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-300 hover:text-white focus:outline-none"
-                        >
-                            {isOpen ? <X size={28} /> : <Menu size={28} />}
-                        </button>
+                        {/* Desktop Menu */}
+                        <div className="hidden md:flex space-x-8">
+                            {navLinks.map((link) => (
+                                <motion.a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={(e) => handleNavClick(e, link.href)}
+                                    className="relative text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-wide group cursor-pointer"
+                                    whileHover={{ y: -2 }}
+                                >
+                                    {link.name}
+                                    <motion.span
+                                        className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 group-hover:w-full transition-all duration-300"
+                                    />
+                                </motion.a>
+                            ))}
+                        </div>
+
+                        {/* Mobile Menu Button */}
+                        <div className="md:hidden flex items-center">
+                            <button
+                                onClick={() => setIsOpen(!isOpen)}
+                                className="text-gray-300 hover:text-white focus:outline-none"
+                            >
+                                {isOpen ? <X size={28} /> : <Menu size={28} />}
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </motion.nav>
 
             {/* Mobile Menu Overlay */}
             <AnimatePresence>
-                {isOpen && createPortal(
+                {isOpen && (
                     <motion.div
                         initial={{ opacity: 0, x: '100%' }}
                         animate={{ opacity: 1, x: 0 }}
@@ -131,11 +133,10 @@ const Navbar = () => {
                                 </a>
                             ))}
                         </div>
-                    </motion.div>,
-                    document.body
+                    </motion.div>
                 )}
             </AnimatePresence>
-        </motion.nav>
+        </>
     );
 };
 
