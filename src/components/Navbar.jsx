@@ -110,7 +110,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
                         transition={{ type: 'tween', duration: 0.3 }}
-                        className="fixed inset-0 z-[9999] md:hidden bg-primary/95 backdrop-blur-xl flex flex-col justify-center items-center"
+                        className="fixed inset-0 z-[9999] md:hidden bg-slate-900 flex flex-col justify-center items-center overflow-y-auto"
                     >
                         <button
                             onClick={() => setIsOpen(false)}
