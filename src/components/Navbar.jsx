@@ -31,6 +31,17 @@ const Navbar = () => {
         { name: 'Contact', href: '#contact' },
     ];
 
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        const element = document.querySelector(href);
+        if (element) {
+            const yOffset = -80; // Offset for navbar
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        setIsOpen(false); // Close mobile menu
+    };
+
     return (
         <motion.nav
             className={`fixed w-full z-50 transition-all duration-300 ${scrolled
@@ -48,7 +59,11 @@ const Navbar = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <a href="#home" className="flex items-center gap-3">
+                        <a
+                            href="#home"
+                            className="flex items-center gap-3"
+                            onClick={(e) => handleNavClick(e, '#home')}
+                        >
                             <Logo variant="fade" size="small" />
                             <span className="text-xl font-bold text-white tracking-tighter">
                                 EvoRise Solutions
@@ -62,7 +77,8 @@ const Navbar = () => {
                             <motion.a
                                 key={link.name}
                                 href={link.href}
-                                className="relative text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-wide group"
+                                onClick={(e) => handleNavClick(e, link.href)}
+                                className="relative text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-wide group cursor-pointer"
                                 whileHover={{ y: -2 }}
                             >
                                 {link.name}
@@ -99,8 +115,8 @@ const Navbar = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+                                    onClick={(e) => handleNavClick(e, link.href)}
+                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 cursor-pointer"
                                 >
                                     {link.name}
                                 </a>

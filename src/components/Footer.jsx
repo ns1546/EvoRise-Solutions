@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -20,11 +20,16 @@ const Footer = () => {
                             <a href="https://instagram.com/evorise.solutions" target="_blank" rel="noopener noreferrer" className="bg-secondary p-2 rounded-full text-gray-400 hover:text-white hover:bg-accent transition-all">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="bg-secondary p-2 rounded-full text-gray-400 hover:text-white hover:bg-accent transition-all">
-                                <Twitter size={20} />
-                            </a>
-                            <a href="#" className="bg-secondary p-2 rounded-full text-gray-400 hover:text-white hover:bg-accent transition-all">
+                            <a href="https://www.linkedin.com/company/evorise-solutions/" target="_blank" rel="noopener noreferrer" className="bg-secondary p-2 rounded-full text-gray-400 hover:text-white hover:bg-accent transition-all">
                                 <Linkedin size={20} />
+                            </a>
+                            <a href="https://youtube.com/@evorisemarketingagency?si=Nav7G9aGHNGq0Ixr" target="_blank" rel="noopener noreferrer" className="bg-secondary p-2 rounded-full text-gray-400 hover:text-white hover:bg-accent transition-all">
+                                <Youtube size={20} />
+                            </a>
+                            <a href="https://www.tiktok.com/@evorise.solutions?_r=1&_t=ZS-91bIxdrkGXM" target="_blank" rel="noopener noreferrer" className="bg-secondary p-2 rounded-full text-gray-400 hover:text-white hover:bg-accent transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -43,11 +48,11 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-bold mb-6">Services</h4>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-400 hover:text-accent transition-colors">Digital Marketing</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-accent transition-colors">Content Creation</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-accent transition-colors">Web Development</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-accent transition-colors">Business Consultancy</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-accent transition-colors">Cyber Security</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-accent transition-colors">Social Media Management</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-accent transition-colors">Graphics Design & Video Editing</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-accent transition-colors">Ad Campaign/Boosting</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-accent transition-colors">Marketing Strategy</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-accent transition-colors">Content Creation</a></li>
                         </ul>
                     </div>
                 </div>

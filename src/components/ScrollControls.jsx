@@ -6,7 +6,7 @@ const ScrollControls = () => {
     const [showBackToTop, setShowBackToTop] = useState(false);
     const [isAutoScrolling, setIsAutoScrolling] = useState(false);
     const animationFrameRef = useRef(null);
-    const scrollSpeedRef = useRef(1); // pixels per frame
+    const scrollSpeedRef = useRef(2); // pixels per frame - increased for faster scrolling
 
     useEffect(() => {
         const handleScroll = () => {
@@ -98,9 +98,9 @@ const ScrollControls = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 100 }}
                         onClick={toggleAutoScroll}
-                        className={`fixed bottom-24 right-6 z-40 ${isAutoScrolling
-                                ? 'bg-red-500 hover:bg-red-600'
-                                : 'bg-blue-500 hover:bg-blue-600'
+                        className={`fixed bottom-6 right-28 z-40 ${isAutoScrolling
+                            ? 'bg-red-500 hover:bg-red-600'
+                            : 'bg-blue-500 hover:bg-blue-600'
                             } text-white rounded-full p-4 shadow-2xl flex items-center gap-2 transition-all duration-300`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -129,7 +129,7 @@ const ScrollControls = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0 }}
                         onClick={scrollToTop}
-                        className="fixed bottom-24 right-6 z-40 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300"
+                        className="fixed bottom-6 right-28 z-40 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         title="Back to Top"

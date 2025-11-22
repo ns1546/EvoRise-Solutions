@@ -199,7 +199,7 @@ const Hero = () => {
                             { label: "Projects Completed", value: 150, suffix: "+" },
                             { label: "Happy Clients", value: 100, suffix: "%" },
                             { label: "Team Members", value: 25, suffix: "+" },
-                            { label: "Years Experience", value: 10, suffix: "+" }
+                            { label: "Years Experience", value: 3, suffix: "+" }
                         ].map((stat, index) => (
                             <motion.div
                                 key={index}
