@@ -143,7 +143,7 @@ const WhatsAppWidget = () => {
                                     <MessageCircle className="w-8 h-8 text-green-600" />
                                 </motion.div>
                                 <div>
-                                    <h3 className="font-bold text-xl">Let's Chat!</h3>
+                                    <h3 className="font-bold text-xl">Let&apos;s Chat!</h3>
                                     <p className="text-sm text-green-100 flex items-center gap-1">
                                         <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
                                         Online now
@@ -168,7 +168,7 @@ const WhatsAppWidget = () => {
                                             Hello! Welcome to EvoRise Solutions
                                         </p>
                                         <p className="text-gray-600 text-sm">
-                                            Ready to grow your business? Let's start a conversation!
+                                            Ready to grow your business? Let&apos;s start a conversation!
                                         </p>
                                     </div>
                                 </div>

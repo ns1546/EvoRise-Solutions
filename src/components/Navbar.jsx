@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
@@ -103,13 +104,13 @@ const Navbar = () => {
 
             {/* Mobile Menu Overlay */}
             <AnimatePresence>
-                {isOpen && (
+                {isOpen && createPortal(
                     <motion.div
                         initial={{ opacity: 0, x: '100%' }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
                         transition={{ type: 'tween', duration: 0.3 }}
-                        className="fixed inset-0 z-50 md:hidden bg-primary/95 backdrop-blur-xl flex flex-col justify-center items-center"
+                        className="fixed inset-0 z-[9999] md:hidden bg-primary/95 backdrop-blur-xl flex flex-col justify-center items-center"
                     >
                         <button
                             onClick={() => setIsOpen(false)}
@@ -130,7 +131,8 @@ const Navbar = () => {
                                 </a>
                             ))}
                         </div>
-                    </motion.div>
+                    </motion.div>,
+                    document.body
                 )}
             </AnimatePresence>
         </motion.nav>

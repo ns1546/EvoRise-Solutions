@@ -22,7 +22,7 @@ const About = () => {
                             EvoRise Solutions is a Marketing Agency and Business Consultancy. We are strongly committed to helping entrepreneurs accelerate their business growth. We help businesses strengthen their online presence while also providing strategic guidance and professional advice to make their offline operations more effective and productive.
                         </p>
                         <p className="text-gray-400 mb-8">
-                            We provide a wide range of services, encompassing every aspect necessary for businesses to achieve sustainable development, expansion, and success in today's competitive marketplace. <span className="text-orange-500 font-semibold">Your Vision, Our Responsibility.</span>
+                            We provide a wide range of services, encompassing every aspect necessary for businesses to achieve sustainable development, expansion, and success in today&apos;s competitive marketplace. <span className="text-orange-500 font-semibold">Your Vision, Our Responsibility.</span>
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

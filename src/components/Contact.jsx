@@ -104,7 +104,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-orange-500 font-medium tracking-widest uppercase mb-2">Get in Touch</h2>
-                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Let's Start a Conversation</h3>
+                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Let&apos;s Start a Conversation</h3>
                         <p className="text-gray-400 mb-10">
                             Ready to accelerate your business growth? Contact us today for a consultation or to learn more about our services.
                         </p>

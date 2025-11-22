@@ -143,7 +143,7 @@ const Hero = () => {
                     {/* Main Heading with Typewriter Effect */}
                     <div className="font-bold mb-8 tracking-tight leading-tight flex flex-col items-center z-10">
                         <div className="text-4xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-slate-400 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                            <TypewriterText text="Let's Build & Grow" delay={0.2} />
+                            <TypewriterText text="Let&apos;s Build & Grow" delay={0.2} />
                         </div>
                         <div className="text-4xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-slate-400 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] mt-2 md:mt-4">
                             <TypewriterText text="Your Brand, Together" delay={1.5} />
